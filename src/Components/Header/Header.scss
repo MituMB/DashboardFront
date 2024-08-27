@@ -1,0 +1,20 @@
+.header{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-right: 0.5px solid rgb(230, 227, 227);
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+
+    button.bar{
+        color: #fff;
+        background: #3F51B5;
+        border: none;
+        outline: none;
+        padding: 0 5px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
