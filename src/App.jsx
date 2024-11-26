@@ -9,8 +9,8 @@ import MainLayout from './Pages/MainLayout/MainLayout'
 const App = () => {
   return (
     <div className='App'>
-
-      
+{/* testinf
+       */}
       <Routes>
         <Route path = '/' element = {<Navigate to = '/login' />} />
         <Route exact path="/home" element={<MainLayout><Home /></MainLayout>} />
