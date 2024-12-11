@@ -7,6 +7,9 @@ const Header = ({toggleSidebar}) => {
     <div className="header">
         <button onClick={toggleSidebar} className="bar"><AiOutlineAlignLeft /></button>
         <div>
+          <h2>Welcome to Dashboard Analysis System test</h2>
+        </div>
+        <div>
         Header widgets
         </div>
         

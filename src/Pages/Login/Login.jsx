@@ -32,7 +32,7 @@ const Login = () => {
                 EmpCode: loginInfo.username,
                 Password: loginInfo.password
             }
-            const url = 'https://localhost:7052/api/v1.0/Login/login';
+            const url = 'https://localhost:7052/api/v1/Login/login';
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
@@ -42,11 +42,13 @@ const Login = () => {
             })
             const result = await response.json();
             const { loginStatus } = result;
+           
             if(loginStatus === 2){
                 handleSuccess('Login Successful.');
                 setTimeout(() => {
                     navigate('/home');
                 }, 1000);
+              
             }
         }
         catch(err){

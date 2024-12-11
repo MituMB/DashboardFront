@@ -3,6 +3,8 @@ import { handleError } from "../../Utils";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Header from "../../Components/Header/Header";
 import "./MainLayout.scss"
+import '@progress/kendo-theme-default/dist/all.css';
+
 const MainLayout = ({children}) => {
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
@@ -29,7 +31,7 @@ const MainLayout = ({children}) => {
   }, []);
 
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleToggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -50,7 +52,8 @@ const MainLayout = ({children}) => {
       <div className="main">
         <Header toggleSidebar={handleToggleSidebar}/>
         <div className="content">
-          <p>widgets will go here...</p>
+          {/* <p>widgets will go here...</p> */}
+
           {children}
         </div>
       </div>
