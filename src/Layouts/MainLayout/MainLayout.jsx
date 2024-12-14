@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { handleError } from "../../Utils";
-import Sidebar from "../../Components/Sidebar/Sidebar";
-import Header from "../../Components/Header/Header";
+import Sidebar from "../../SharedComp/Sidebar/Sidebar";
+import Header from "../../SharedComp/Header/Header";
 import "./MainLayout.scss"
 import '@progress/kendo-theme-default/dist/all.css';
 
@@ -31,25 +31,18 @@ const MainLayout = ({children}) => {
   }, []);
 
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleSidebar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    // <div>
-    //   <h1>Menu List</h1>
-    //   <ul>
-    //     {menuList.map((menuItem, index) => (
-    //       <li key={index} > {menuItem.menuName} </li>
-    //     ))}
-    //   </ul>
-    // </div>
+
 
     <div className="layout">
-      {/* <Sidebar isOpen={isOpen} menuList={menuList}/> */}
+      <Sidebar isOpen={isOpen} menuList={menuList}/>
    
-      <div className="main">
+      <div className="main" style={{paddingLeft: isOpen ? "0px" : "300px"}}>
         <Header toggleSidebar={handleToggleSidebar}/>
         <div className="content">
           {/* <p>widgets will go here...</p> */}

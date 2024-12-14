@@ -5,7 +5,7 @@ import FloorProductionChart from "../../Components/ChartComp/FloorProduction";
 import FloorTargetAchivement from "../../Components/ChartComp/FloorTargetAchivement";
 import FactoryProduction from "../../Components/ChartComp/FactoryProduction";
 import ChartList from "../ChartList/ChartList";
-import InputForm from "../../Components/InputForm/InputForm";
+import InputForm from "../../SharedComp/InputForm/InputForm";
 // import NeedleChart from '../../Components/ChartComp/NeedleChart'
 // import NeedleChartTwo from '../../Components/ChartComp/PieChart'
 // import PieChart from '../../Components/ChartComp/PieChart'

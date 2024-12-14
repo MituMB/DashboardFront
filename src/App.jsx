@@ -5,8 +5,8 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 // import ChartList from './Components/ChartList/ChartList'
 import ChartList from './Pages/ChartList/ChartList'
-import MainLayout from './Pages/MainLayout/MainLayout'
-import { FloorWisePerformance } from './Pages/Dashboard'
+import MainLayout from './Layouts/MainLayout/MainLayout'
+import { DemoDashboard, FloorWisePerformance, GProductionDashboard, HrDashboard } from './Pages/Dashboard'
 // import '@progress/kendo-theme-default/dist/all.css';
 
 // import Demo from './Components/Demo/Demo'
@@ -21,6 +21,9 @@ const App = () => {
       <Routes>
         <Route path = '/' element = {<Navigate to = '/login' />} />
         <Route exact path="/home" element={<MainLayout><Home /></MainLayout>} />
+        <Route exact path="/dashboard/demo" element={<MainLayout><DemoDashboard /></MainLayout>} />
+        <Route exact path="/dashboard/hr" element={<MainLayout><HrDashboard /></MainLayout>} />
+        <Route exact path="/dashboard/garments" element={<MainLayout><GProductionDashboard /></MainLayout>} />
         {/* <Route path ='/charts/chartist' element = {<MainLayout><ChartList /></MainLayout>} /> */}
         <Route path ='/chartlist' element = {<MainLayout><ChartList /></MainLayout>} />
         <Route path ='/dashboard/floor' element = {<MainLayout><FloorWisePerformance /></MainLayout>} />

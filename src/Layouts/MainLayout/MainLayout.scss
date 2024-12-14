@@ -1,0 +1,18 @@
+.layout{
+    display: flex;
+    color: #333;
+    .main{
+      flex:2;
+      background-color: #efefef;
+      transition: .5s ease-in-out;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -ms-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      .content{
+        padding: 10px;
+
+      }
+  
+    }
+  }

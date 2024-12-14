@@ -1,16 +1,21 @@
 .sidebar{
-    width:300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+     width:300px;
+     height: 100vh;
     border-right: 0.5px solid rgb(230, 227, 227);
-    min-height: 100vh;
     background-color: #2c2556;
-    transition: .5s ease-in-out;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -ms-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
+    // transition: .5s ease-in-out;
+    // -webkit-transition: .5s ease-in-out;
+    // -moz-transition: .5s ease-in-out;
+    // -ms-transition: .5s ease-in-out;
+    // -o-transition: .5s ease-in-out;
 }
 .sidebar.active{
-    width: 0px;
+  width: 0px;
+  display: none;
+//   transition: .5s ease-in-out;
 }
 .brand_name {
     text-align: center;
