@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import FloorProductionChart from "../../Components/ChartComp/FloorProduction";
 import FloorTargetAchivement from "../../Components/ChartComp/FloorTargetAchivement";
 import FactoryProduction from "../../Components/ChartComp/FactoryProduction";
 import ChartList from "../ChartList/ChartList";
+import InputForm from "../../Components/InputForm/InputForm";
 // import NeedleChart from '../../Components/ChartComp/NeedleChart'
 // import NeedleChartTwo from '../../Components/ChartComp/PieChart'
 // import PieChart from '../../Components/ChartComp/PieChart'
@@ -11,8 +14,11 @@ import ChartList from "../ChartList/ChartList";
 // import Demo from '../../Components/Demo/Demo'
 
 const FloorWisePerformance = () => {
+
   return (
     <>
+    
+  <InputForm/>
       <div
         className="dashboard-header d-flex align-items-center justify-content-around wrap py-3"
         style={{ flexWrap: "wrap" }}

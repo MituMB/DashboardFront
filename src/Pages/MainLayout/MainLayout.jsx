@@ -47,7 +47,7 @@ const MainLayout = ({children}) => {
     // </div>
 
     <div className="layout">
-      <Sidebar isOpen={isOpen} menuList={menuList}/>
+      {/* <Sidebar isOpen={isOpen} menuList={menuList}/> */}
    
       <div className="main">
         <Header toggleSidebar={handleToggleSidebar}/>

@@ -2,9 +2,9 @@ import React from 'react';
 // import { Chart, ChartSeries, ChartSeriesItem, ChartCategoryAxis, ChartCategoryAxisItem } from '@progress/kendo-react-charts';
 // import 'hammerjs';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LabelList, Cell} from 'recharts';
-import { baseURL } from '../../utils/api';
-export const floorWPerformance = `${baseURL}/api/EventInfo/performance-by-date?date=2024-11-24&unitId=8`
-console.log(floorWPerformance);
+// import { baseURL } from '../../utils/api';
+// export const floorWPerformance = `${baseURL}/api/EventInfo/performance-by-date?date=2024-11-24&unitId=8`
+// console.log(floorWPerformance);
 
 
 const data = [
@@ -16,6 +16,8 @@ const data = [
 
 const colors = ['#fabdbd', '#82ca9d', '#ffc658', '#ff7f50', '#8dd1e1']; // Array of colors for the bars
 const FloorProductionChart = ({title}) => {
+  console.log(data);
+  
   // const categories = ['2nd Floor', '3rd Floor', '4th Floor', '5th Floor'];
   // const productionData = [14449, 19887, 13447, 9110];
 
