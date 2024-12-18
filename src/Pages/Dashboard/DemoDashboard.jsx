@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputForm from "../../SharedComp/InputForm/InputForm";
 import { FloorProductionChart,FactoryProduction,FloorTargetAchivement, FloorWiseDHU, FloorWiseEffeciency } from "../../Components/ChartComp";
 
 const DemoDashboard = () => {
+  const [data, setData] = useState(null);
   const [selectedId, setSelectedId] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   
@@ -14,7 +15,28 @@ const DemoDashboard = () => {
   const handleDateChange = (date) => {
    setSelectedDate(date);
  };
+ const fetchData = async () => {
+  const url = `https://mis-download.mascoknit.com/api?date=${selectedDate}&unitId=${selectedId}`;
+  console.log(url);
   
+  try {
+    const response = await fetch(url,{ mode: 'no-cors' });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const result = await response.json();
+    setData(result);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+useEffect(() => {
+  fetchData();
+}, [selectedDate, selectedId]);
+console.log(selectedId);
+console.log(selectedDate);
+
   return (
     <div>
       <InputForm onDateChange={handleDateChange} onIdChange={handleIdChange}/>
